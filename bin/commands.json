@@ -1,0 +1,70 @@
+[{
+  "name": "get",
+  "description": "write a db request to stdout or a file",
+  "parameters": [{
+    "name": "-t | --things",
+    "required": true,
+    "description": "things to request"
+  }, {
+    "name": "-s | --secret <secret-string>",
+    "defaultValue": "no secret",
+    "description": "request only things with this secret"
+  }, {
+    "name": "-f | --file <output-file>",
+    "required": false,
+    "default": "write to stdout",
+    "description": "outputfile json is written to"
+  }, {
+    "name": "--hostname <hostname>",
+    "defaultValue": "things-happened.org",
+    "description": "given json is posted to"
+  }, {
+    "name": "-p | --port <port>",
+    "defaultValue": 80,
+    "description": "given json is posted to"
+  }, {
+    "name": "-v | --verbose",
+    "defaultValue": false,
+    "description": "get a summary of server responses"
+  }, {
+    "name": "-h | --happened",
+    "required": false,
+    "description": "happened with things to request"
+  }]
+}, {
+  "name": "file2db",
+  "description": "post a json file into the db",
+  "parameters": [{
+    "name": "-f | --file <json-file>",
+    "required": true,
+    "description": "content of is inserted into the database. must be an object or an array but only a depth of 1 is supported yet."
+  }, {
+    "name": "-s | --secret <secret-string>",
+    "defaultValue": "no secret",
+    "description": "insert each object with a given secret."
+  }, {
+    "name": "-i | --initialize",
+    "defaultValue": "no",
+    "description": "insert each object as new thing. means everything starting with '_' is eliminated before adding it into the database"
+  }, {
+    "name": "--hostname <hostname>",
+    "defaultValue": "things-happened.org",
+    "description": "given json is posted to"
+  }, {
+    "name": "-p | --port <port>",
+    "defaultValue": 80,
+    "description": "given json is posted to"
+  }, {
+    "name": "-t | --things <things>",
+    "required": true,
+    "description": "given json is add to"
+  }, {
+    "name": "-h | --happened <happened>",
+    "required": true,
+    "description": "to things in json file"
+  }, {
+    "name": "-v | --verbose",
+    "defaultValue": false,
+    "description": "get a summary of server responses"
+  }]
+}]

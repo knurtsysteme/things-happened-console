@@ -1,0 +1,45 @@
+{
+  "name": "things-happened-console",
+  "description": "console tools for things-happened",
+  "version": "0.1.0",
+  "homepage": "https://github.com//things-happened-cli",
+  "author": {
+    "name": "Daniel Oltmanns",
+    "url": "http://knurtsysteme.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com//things-happened-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com//things-happened-cli/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com//things-happened-cli/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "cli",
+    "command line"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "thc": "./bin/thc"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "test": "mocha -R test"
+  },
+  "dependencies": {
+    "minimist": "~0.0.8",
+    "request": "^2.40.0",
+    "verbalize": "~0.1.1"
+  },
+  "devDependencies": {
+  }
+}

@@ -26,3 +26,10 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# others
+*~
+.settings
+.project
+**/my_*
+my_**
