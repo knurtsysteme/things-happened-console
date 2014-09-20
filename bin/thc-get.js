@@ -13,13 +13,12 @@ module.exports = function(argv, usage) {
   var verbose = argv.v || argv.verbose || false;
   var secret = argv.s || argv.secret || false;
   var init = argv.i || argv.init ? true : false;
-
+  
   var path = '/get/' + things;
   if (happened) {
     path += '/' + happened;
   }
   path += '.json';
-
   if (!things) {
     usage(command, 'Missing things to request', 1409122039);
   }
@@ -32,14 +31,17 @@ module.exports = function(argv, usage) {
   }
 
   var url = 'http://' + hostname + (port != 80 ? ':' + port : '') + path;
+  if(params.criteria) {
+    url += '?criteria=' + JSON.stringify(params.criteria);
+  }
   if (verbose) {
     log.info('GET ' + url);
   }
+  
 
   request({
     url : url,
-    json : true,
-    qs : params
+    json : true
   }, function(error, response, body) {
     if (!error && response.statusCode === 200) {
       if (file) {

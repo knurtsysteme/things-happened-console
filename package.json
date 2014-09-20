@@ -1,7 +1,7 @@
 {
   "name": "things-happened-console",
   "description": "console tools for things-happened",
-  "version": "0.1.0",
+  "version": "0.1.1-SNAPSHOT",
   "homepage": "https://github.com//things-happened-cli",
   "author": {
     "name": "Daniel Oltmanns",
